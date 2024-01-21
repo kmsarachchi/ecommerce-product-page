@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Figtree:wght@600;800&family=Hanken+Grotesk:wght@500;700;800&family=Inter:wght@400;700;800&family=Kumbh+Sans:wght@400;700&family=Manrope:wght@800&family=Poppins:ital,wght@0,700;1,400;1,800&family=Roboto:wght@400;700&family=Work+Sans:wght@400;600;700&display=swap");
+
+* {
+  font-family: "Kumbh Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70rem;
+  border-bottom: 2px solid var(--Light-grayish-blue);
+  padding: 2rem 0;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.menu-icon {
+  display: none;
+}
+.closemenu-icon {
+  display: none;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+}
+.links li {
+  list-style: none;
+  padding: 0.9rem;
+}
+.links a {
+  color: var(--Dark-grayish-blue-);
+  text-decoration: none;
+  cursor: pointer;
+}
+.links ::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: var(--Orange);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.profile-img {
+  width: 3rem;
+  cursor: pointer;
+}
+.cart-icon {
+  cursor: pointer;
+}
+.allitems {
+  position: relative;
+  font-weight: 800;
+  background-color: var(--Orange);
+  color: var(--white);
+  border-radius: 50%;
+  font-size: 0.8rem;
+  padding: 0.1rem 0.4rem;
+  top: -1rem;
+  left: -0.7rem;
+}
+
+/* ---------------------------------------- */
+@media (max-width: 1023px) {
+  .nav {
+    border: none;
+    padding: 1rem;
+    width: 100%;
+  }
+  .nav-links {
+    position: absolute;
+    background-color: var(--white);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 68%;
+    z-index: 999;
+  }
+  .nav-left {
+    gap: 1rem;
+  }
+  .menu-icon {
+    display: block;
+  }
+  .closemenu-icon {
+    display: block;
+    position: absolute;
+    left: 1.5rem;
+    top: 1.5rem;
+  }
+  .showmenu {
+    display: block;
+  }
+  .hidemenu {
+    display: none;
+  }
+  .nav-right {
+    gap: 1rem;
+  }
+  .links {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 5rem;
+  }
+  .links li {
+    padding-left: 1.5rem;
+  }
+  .links a {
+    color: black;
+    font-weight: 800;
+  }
+
+  .profile-img {
+    width: 1.5rem;
+    cursor: pointer;
+  }
+}
